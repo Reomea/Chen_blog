@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<style>
+#a {
+  text-decoration: none;
+  color:white;
+  background-color:#D0E4FC;
+  border-radius:25px;
+  padding:10px;
+  margin-top:35px;
+}
+</style>
+    <meta charset="UTF-8">
+    <title>ZeroTermux下载与使用</title>
+    <script>hljs.highlightAll();</script>
+  </head>
+  <body>
+    <h1>Termux与Zerotermux的区别</h1>
+    <div>Termux——一个在安卓设备上的Linux终端模拟器，它的功能非常强大，能运行Python程序、跑PHP……</div>
+    <div>ZeroTermux——Termux的魔改版。在termux的基础上进行魔改。zerotermux能安装有图形的Linux桌面、能快速切换源、安装Windows系统</div>
+    <h1>zerotermux怎么安装Windows系统</h1>
+    <p>首先，要安装Zerotermux和VNC这两个软件，然后打开zerotermux输入以下命令:</p>
+    <pre id="textToCopy">
+      <code>
+        whoami
+        termux-setup-storage
+        cd /storage/emulated/0/
+        mkdir xinhao
+        cd xinhao
+        mkdir windows
+      </code>
+    </pre>
+    <button id="copyBtn"><sup><code>复制</code></sup></button>
+    <p>然后双击左上角，往下划找到QEMU点一下，选择Windows7等待安装安装完成后输入1并按下回车就会出现一个地址127.0.0.1:0复制这个地址打开vnc，点击右下角的加号，在Address下面输入127.0.0.1:0然后确认，点击那个127.0.0.1:0就能进入Windows7系统了</p>
+    <p>如果还想再打开Windows系统，输入bash start-win7.sh然后按照前面的操作就行了</p>
+    <a id="a"href="https://www.123pan.com/s/6LtGjv-p6T63.html">Zerotermux</a>
+    <br>
+    <br>
+    <br>
+    <a id="a"href="https://www.123pan.com/s/6LtGjv-f6T63.html">Rvnc Viewer</a>
+<script>
+document.getElementById('copyBtn').addEventListener('click', function() {
+    const textToCopy = document.getElementById('textToCopy');
+    const range = document.createRange();
+    range.selectNode(textToCopy);
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
+    document.execCommand('copy');
+    window.getSelection().removeAllRanges();
+    alert('已复制到剪贴板！');
+    console.log('copy');
+});
+</script>
+  </body>
+</html>
